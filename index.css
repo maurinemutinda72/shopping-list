@@ -1,0 +1,132 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f7fa, #a5d6a7);
+    animation: backgroundAnimation 10s infinite alternate;
+    color: #333;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #e0f7fa, #a5d6a7);
+    }
+    100% {
+        background: linear-gradient(135deg, #c8e6c9, #81c784);
+    }
+}
+
+h1 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Controls Section */
+#controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #66bb6a;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #2e7d32;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Shopping List */
+#shopping-list {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+#shopping-list li {
+    background-color: #c8e6c9;
+    border: 2px solid #81c784;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#shopping-list li:hover {
+    background-color: #a5d6a7;
+    transform: scale(1.02);
+}
+
+#shopping-list span {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+#shopping-list button {
+    background-color: #4caf50;
+    margin-left: 5px;
+}
+
+#shopping-list button:hover {
+    background-color: #388e3c;
+}
+
+/* Additional Buttons */
+#list-actions button {
+    margin: 5px;
+    font-size: 1rem;
+}
+
+/* Alerts */
+.alert {
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #81c784;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}

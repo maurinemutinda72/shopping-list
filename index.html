@@ -1,0 +1,80 @@
+<!-- HTML File -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Shopping List</h1>
+
+    <!-- User Instructions -->
+    <div id="controls">
+        <p>Select items to add or remove from your list:</p>
+    </div>
+
+    <!-- Form to Add New Items -->
+    <form id="add-item-form">
+        <label for="new-item">Add a new item:</label>
+        <input type="text" id="new-item" placeholder="Enter item name" required>
+        <button type="submit">Add Item</button>
+    </form>
+
+    <!-- Shopping List -->
+    <ul id="shopping-list">
+        <!-- Predefined items to choose from -->
+        <li>
+            <span class="item-name">Cabbage</span>
+            <span class="item-price">$10</span>
+            <div class="item-controls">
+                <button class="add-btn">Add</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </li>
+        <li>
+            <span class="item-name">Zucchini</span>
+            <span class="item-price">$40</span>
+            <div class="item-controls">
+                <button class="add-btn">Add</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </li>
+        <li>
+            <span class="item-name">Maize flour</span>
+            <span class="item-price">$12</span>
+            <div class="item-controls">
+                <button class="add-btn">Add</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </li>
+        <li>
+            <span class="item-name">Eggs</span>
+            <span class="item-price">$20</span>
+            <div class="item-controls">
+                <button class="add-btn">Add</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </li>
+        <li>
+            <span class="item-name">Rice</span>
+            <span class="item-price">$29</span>
+            <div class="item-controls">
+                <button class="add-btn">Add</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Alert, Print, and Clear List Buttons -->
+    <div id="action-buttons">
+        <button id="alert">The List is Now Okay</button>
+        <button id="print">Print My List</button>
+        <button id="clear-list">Clear List</button> <!-- New Clear List Button -->
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
