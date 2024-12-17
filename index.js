@@ -77,19 +77,33 @@ function editItem(index) {
     }
 }
 
-// Delete an item
+// Delete an item with confirmation
 function deleteItem(index) {
-    shoppingList.splice(index, 1);
-    renderList();
+    const itemName = shoppingList[index]?.name; // Get the item name safely
+    if (confirm(`Are you sure you want to delete "${itemName}"?`)) {
+        shoppingList.splice(index, 1); // Remove the item
+        renderList(); // Update the list
+        alert(`"${itemName}" has been deleted successfully.`); // User feedback
+    }
 }
 
-// Clear the list
+// Clear the entire list with double confirmation
 clearButton.addEventListener("click", () => {
-    if (confirm("Are you sure you want to clear the list?")) {
-        shoppingList.length = 0; // Clear array
-        renderList();
+    if (shoppingList.length === 0) {
+        alert("Your list is already empty.");
+        return; // Prevent unnecessary prompts
+    }
+
+    if (confirm("Are you sure you want to clear the entire list?")) {
+        if (confirm("This action cannot be undone. Do you really want to proceed?")) {
+            shoppingList.length = 0; // Clear the array
+            renderList(); // Update the list
+            alert("Your shopping list has been cleared successfully.");
+        }
     }
 });
+
+
 
 // Initial render
 renderList();
